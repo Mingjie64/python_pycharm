@@ -1,0 +1,1221 @@
+2020-09-15 11:30:11,326   36300     INFO test_runner.py(154) - 预计并发线程数：1
+2020-09-15 11:30:29,198   32200     INFO result.py(65) - 开始测试： test_1 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 11:30:33,197   32200  WARNING connectionpool.py(751) - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000035EE460>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/962c4f322370e60098a3699d34a0b8c4/element
+2020-09-15 11:30:34,199   32200  WARNING connectionpool.py(751) - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000038254C0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/962c4f322370e60098a3699d34a0b8c4/element
+2020-09-15 11:30:35,200   32200  WARNING connectionpool.py(751) - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000000003825310>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/962c4f322370e60098a3699d34a0b8c4/element
+2020-09-15 11:30:36,216   32200    ERROR result.py(171) - 测试产生错误： test_1 (CRM.业务管理.Page_configuration.Three_template.forTest)
+Traceback (most recent call last):
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000000038256A0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_pycharm\CRM\业务管理\Page_configuration\Three_template.py", line 67, in test_1
+    self.driver.find_element_by_xpath(
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 374, in execute
+    return self._request(command_info[0], url, body=data)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\request.py", line 79, in request
+    return self.request_encode_body(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\request.py", line 171, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\poolmanager.py", line 336, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 726, in urlopen
+    retries = retries.increment(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=51110): Max retries exceeded with url: /session/962c4f322370e60098a3699d34a0b8c4/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000038256A0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+2020-09-15 11:30:36,220   32200     INFO result.py(86) - 测试结束： test_1 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 11:30:36,220   32200     INFO result.py(87) - 耗时： 7.021701812744141
+2020-09-15 11:30:36,220   32200     INFO result.py(65) - 开始测试： test_2 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 11:30:38,220   32200  WARNING connectionpool.py(751) - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000000003825B80>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/962c4f322370e60098a3699d34a0b8c4/element
+2020-09-15 11:30:39,230   32200  WARNING connectionpool.py(751) - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000000003825D30>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/962c4f322370e60098a3699d34a0b8c4/element
+2020-09-15 11:30:40,231   32200  WARNING connectionpool.py(751) - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000000003825E80>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/962c4f322370e60098a3699d34a0b8c4/element
+2020-09-15 11:30:41,232   32200    ERROR result.py(171) - 测试产生错误： test_2 (CRM.业务管理.Page_configuration.Three_template.forTest)
+Traceback (most recent call last):
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000000035EEFD0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_pycharm\CRM\业务管理\Page_configuration\Three_template.py", line 341, in test_2
+    self.driver.find_element_by_xpath(
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 374, in execute
+    return self._request(command_info[0], url, body=data)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\request.py", line 79, in request
+    return self.request_encode_body(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\request.py", line 171, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\poolmanager.py", line 336, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 726, in urlopen
+    retries = retries.increment(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=51110): Max retries exceeded with url: /session/962c4f322370e60098a3699d34a0b8c4/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000035EEFD0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+2020-09-15 11:30:41,236   32200     INFO result.py(86) - 测试结束： test_2 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 11:30:41,236   32200     INFO result.py(87) - 耗时： 5.0165016651153564
+2020-09-15 11:30:41,236   32200     INFO result.py(65) - 开始测试： test_3 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 11:30:42,237   32200  WARNING connectionpool.py(751) - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000038254F0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/962c4f322370e60098a3699d34a0b8c4/element
+2020-09-15 11:30:43,237   32200  WARNING connectionpool.py(751) - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000038256A0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/962c4f322370e60098a3699d34a0b8c4/element
+2020-09-15 11:30:44,232   32200  WARNING connectionpool.py(751) - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000038252B0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/962c4f322370e60098a3699d34a0b8c4/element
+2020-09-15 11:30:45,233   32200    ERROR result.py(171) - 测试产生错误： test_3 (CRM.业务管理.Page_configuration.Three_template.forTest)
+Traceback (most recent call last):
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000000038255E0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_pycharm\CRM\业务管理\Page_configuration\Three_template.py", line 427, in test_3
+    self.driver.find_element_by_xpath(
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 374, in execute
+    return self._request(command_info[0], url, body=data)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\request.py", line 79, in request
+    return self.request_encode_body(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\request.py", line 171, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\poolmanager.py", line 336, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 726, in urlopen
+    retries = retries.increment(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=51110): Max retries exceeded with url: /session/962c4f322370e60098a3699d34a0b8c4/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000038255E0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+2020-09-15 11:30:45,236   32200     INFO result.py(86) - 测试结束： test_3 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 11:30:45,236   32200     INFO result.py(87) - 耗时： 3.9994001388549805
+2020-09-15 11:30:45,236   32200     INFO result.py(65) - 开始测试： test_4 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 11:30:47,232   32200  WARNING connectionpool.py(751) - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036D4070>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/962c4f322370e60098a3699d34a0b8c4/element
+2020-09-15 11:30:48,232   32200  WARNING connectionpool.py(751) - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036D41C0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/962c4f322370e60098a3699d34a0b8c4/element
+2020-09-15 11:30:49,235   32200  WARNING connectionpool.py(751) - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036D4310>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/962c4f322370e60098a3699d34a0b8c4/element
+2020-09-15 11:30:50,238   32200    ERROR result.py(171) - 测试产生错误： test_4 (CRM.业务管理.Page_configuration.Three_template.forTest)
+Traceback (most recent call last):
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000000036D4460>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_pycharm\CRM\业务管理\Page_configuration\Three_template.py", line 452, in test_4
+    self.driver.find_element_by_xpath(
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 374, in execute
+    return self._request(command_info[0], url, body=data)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\request.py", line 79, in request
+    return self.request_encode_body(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\request.py", line 171, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\poolmanager.py", line 336, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 726, in urlopen
+    retries = retries.increment(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=51110): Max retries exceeded with url: /session/962c4f322370e60098a3699d34a0b8c4/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036D4460>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+2020-09-15 11:30:50,239   32200     INFO result.py(86) - 测试结束： test_4 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 11:30:50,239   32200     INFO result.py(87) - 耗时： 5.00350022315979
+2020-09-15 11:30:50,239   36300    ERROR test_runner.py(193) - 
+Error	test_1 (CRM.业务管理.Page_configuration.Three_template.forTest)
+Error	test_2 (CRM.业务管理.Page_configuration.Three_template.forTest)
+Error	test_3 (CRM.业务管理.Page_configuration.Three_template.forTest)
+Error	test_4 (CRM.业务管理.Page_configuration.Three_template.forTest)
+
+2020-09-15 11:30:50,242   36300     INFO test_runner.py(211) - 
+测试结束！
+运行时间: 0:00:39.308930
+共计执行用例数量：4
+执行成功用例数量：0
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：4
+
+2020-09-15 11:40:06,153   38716     INFO test_runner.py(154) - 预计并发线程数：1
+2020-09-15 11:40:45,861   36480     INFO result.py(65) - 开始测试： test_1 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 11:40:49,862   36480  WARNING connectionpool.py(751) - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000035F3400>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/609a43d013266dcd0d4cafca9e368ffa/element
+2020-09-15 11:40:50,854   36480  WARNING connectionpool.py(751) - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000000003641460>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/609a43d013266dcd0d4cafca9e368ffa/element
+2020-09-15 11:40:51,854   36480  WARNING connectionpool.py(751) - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036415B0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/609a43d013266dcd0d4cafca9e368ffa/element
+2020-09-15 11:40:52,859   36480    ERROR result.py(171) - 测试产生错误： test_1 (CRM.业务管理.Page_configuration.Three_template.forTest)
+Traceback (most recent call last):
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000000036416D0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_pycharm\CRM\业务管理\Page_configuration\Three_template.py", line 67, in test_1
+    self.driver.find_element_by_xpath(
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 374, in execute
+    return self._request(command_info[0], url, body=data)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\request.py", line 79, in request
+    return self.request_encode_body(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\request.py", line 171, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\poolmanager.py", line 336, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 726, in urlopen
+    retries = retries.increment(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=52973): Max retries exceeded with url: /session/609a43d013266dcd0d4cafca9e368ffa/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036416D0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+2020-09-15 11:40:52,864   36480     INFO result.py(86) - 测试结束： test_1 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 11:40:52,864   36480     INFO result.py(87) - 耗时： 7.003700256347656
+2020-09-15 11:40:52,864   36480     INFO result.py(65) - 开始测试： test_2 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 11:40:54,871   36480  WARNING connectionpool.py(751) - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000000003641BB0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/609a43d013266dcd0d4cafca9e368ffa/element
+2020-09-15 11:40:55,871   36480  WARNING connectionpool.py(751) - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000000003641D60>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/609a43d013266dcd0d4cafca9e368ffa/element
+2020-09-15 11:40:56,871   36480  WARNING connectionpool.py(751) - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000000003641EB0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/609a43d013266dcd0d4cafca9e368ffa/element
+2020-09-15 11:40:57,873   36480    ERROR result.py(171) - 测试产生错误： test_2 (CRM.业务管理.Page_configuration.Three_template.forTest)
+Traceback (most recent call last):
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000000036E6040>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_pycharm\CRM\业务管理\Page_configuration\Three_template.py", line 341, in test_2
+    self.driver.find_element_by_xpath(
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 374, in execute
+    return self._request(command_info[0], url, body=data)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\request.py", line 79, in request
+    return self.request_encode_body(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\request.py", line 171, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\poolmanager.py", line 336, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 726, in urlopen
+    retries = retries.increment(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=52973): Max retries exceeded with url: /session/609a43d013266dcd0d4cafca9e368ffa/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036E6040>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+2020-09-15 11:40:57,877   36480     INFO result.py(86) - 测试结束： test_2 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 11:40:57,877   36480     INFO result.py(87) - 耗时： 5.012501239776611
+2020-09-15 11:40:57,877   36480     INFO result.py(65) - 开始测试： test_3 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 11:40:58,882   36480  WARNING connectionpool.py(751) - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036E6190>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/609a43d013266dcd0d4cafca9e368ffa/element
+2020-09-15 11:40:59,882   36480  WARNING connectionpool.py(751) - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036E62E0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/609a43d013266dcd0d4cafca9e368ffa/element
+2020-09-15 11:41:00,882   36480  WARNING connectionpool.py(751) - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036E6430>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/609a43d013266dcd0d4cafca9e368ffa/element
+2020-09-15 11:41:01,883   36480    ERROR result.py(171) - 测试产生错误： test_3 (CRM.业务管理.Page_configuration.Three_template.forTest)
+Traceback (most recent call last):
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000000036E6580>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_pycharm\CRM\业务管理\Page_configuration\Three_template.py", line 427, in test_3
+    self.driver.find_element_by_xpath(
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 374, in execute
+    return self._request(command_info[0], url, body=data)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\request.py", line 79, in request
+    return self.request_encode_body(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\request.py", line 171, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\poolmanager.py", line 336, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 726, in urlopen
+    retries = retries.increment(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=52973): Max retries exceeded with url: /session/609a43d013266dcd0d4cafca9e368ffa/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036E6580>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+2020-09-15 11:41:01,885   36480     INFO result.py(86) - 测试结束： test_3 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 11:41:01,885   36480     INFO result.py(87) - 耗时： 4.0084004402160645
+2020-09-15 11:41:01,885   36480     INFO result.py(65) - 开始测试： test_4 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 11:41:03,886   36480  WARNING connectionpool.py(751) - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036E66D0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/609a43d013266dcd0d4cafca9e368ffa/element
+2020-09-15 11:41:04,886   36480  WARNING connectionpool.py(751) - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036E6820>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/609a43d013266dcd0d4cafca9e368ffa/element
+2020-09-15 11:41:05,886   36480  WARNING connectionpool.py(751) - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036E6970>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/609a43d013266dcd0d4cafca9e368ffa/element
+2020-09-15 11:41:06,895   36480    ERROR result.py(171) - 测试产生错误： test_4 (CRM.业务管理.Page_configuration.Three_template.forTest)
+Traceback (most recent call last):
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000000035F3D30>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_pycharm\CRM\业务管理\Page_configuration\Three_template.py", line 452, in test_4
+    self.driver.find_element_by_xpath(
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 374, in execute
+    return self._request(command_info[0], url, body=data)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\request.py", line 79, in request
+    return self.request_encode_body(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\request.py", line 171, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\poolmanager.py", line 336, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 726, in urlopen
+    retries = retries.increment(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=52973): Max retries exceeded with url: /session/609a43d013266dcd0d4cafca9e368ffa/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000035F3D30>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+2020-09-15 11:41:06,896   36480     INFO result.py(86) - 测试结束： test_4 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 11:41:06,896   36480     INFO result.py(87) - 耗时： 5.010501146316528
+2020-09-15 11:41:06,896   38716    ERROR test_runner.py(193) - 
+Error	test_1 (CRM.业务管理.Page_configuration.Three_template.forTest)
+Error	test_2 (CRM.业务管理.Page_configuration.Three_template.forTest)
+Error	test_3 (CRM.业务管理.Page_configuration.Three_template.forTest)
+Error	test_4 (CRM.业务管理.Page_configuration.Three_template.forTest)
+
+2020-09-15 11:41:06,898   38716     INFO test_runner.py(211) - 
+测试结束！
+运行时间: 0:01:01.081108
+共计执行用例数量：4
+执行成功用例数量：0
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：4
+
+2020-09-15 14:05:14,786   38168     INFO test_runner.py(154) - 预计并发线程数：1
+2020-09-15 14:05:32,980   37976     INFO result.py(65) - 开始测试： test_1 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 14:05:36,986   37976  WARNING connectionpool.py(751) - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000035E9400>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/50107483a4a59f2169fb0f4276af1c9a/element
+2020-09-15 14:05:37,987   37976  WARNING connectionpool.py(751) - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000000003641460>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/50107483a4a59f2169fb0f4276af1c9a/element
+2020-09-15 14:05:38,986   37976  WARNING connectionpool.py(751) - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036412E0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/50107483a4a59f2169fb0f4276af1c9a/element
+2020-09-15 14:05:39,994   37976    ERROR result.py(171) - 测试产生错误： test_1 (CRM.业务管理.Page_configuration.Three_template.forTest)
+Traceback (most recent call last):
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000000036416A0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_pycharm\CRM\业务管理\Page_configuration\Three_template.py", line 67, in test_1
+    self.driver.find_element_by_xpath(
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 374, in execute
+    return self._request(command_info[0], url, body=data)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\request.py", line 79, in request
+    return self.request_encode_body(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\request.py", line 171, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\poolmanager.py", line 336, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 726, in urlopen
+    retries = retries.increment(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=59486): Max retries exceeded with url: /session/50107483a4a59f2169fb0f4276af1c9a/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036416A0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+2020-09-15 14:05:39,999   37976     INFO result.py(86) - 测试结束： test_1 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 14:05:39,999   37976     INFO result.py(87) - 耗时： 7.019000053405762
+2020-09-15 14:05:39,999   37976     INFO result.py(65) - 开始测试： test_2 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 14:05:41,996   37976  WARNING connectionpool.py(751) - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000000003641BB0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/50107483a4a59f2169fb0f4276af1c9a/element
+2020-09-15 14:05:43,000   37976  WARNING connectionpool.py(751) - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000000003641D60>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/50107483a4a59f2169fb0f4276af1c9a/element
+2020-09-15 14:05:44,010   37976  WARNING connectionpool.py(751) - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000000003641EB0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/50107483a4a59f2169fb0f4276af1c9a/element
+2020-09-15 14:05:45,012   37976    ERROR result.py(171) - 测试产生错误： test_2 (CRM.业务管理.Page_configuration.Three_template.forTest)
+Traceback (most recent call last):
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000000036E6040>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_pycharm\CRM\业务管理\Page_configuration\Three_template.py", line 341, in test_2
+    self.driver.find_element_by_xpath(
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 374, in execute
+    return self._request(command_info[0], url, body=data)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\request.py", line 79, in request
+    return self.request_encode_body(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\request.py", line 171, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\poolmanager.py", line 336, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 726, in urlopen
+    retries = retries.increment(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=59486): Max retries exceeded with url: /session/50107483a4a59f2169fb0f4276af1c9a/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036E6040>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+2020-09-15 14:05:45,013   37976     INFO result.py(86) - 测试结束： test_2 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 14:05:45,013   37976     INFO result.py(87) - 耗时： 5.013999938964844
+2020-09-15 14:05:45,013   37976     INFO result.py(65) - 开始测试： test_3 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 14:05:46,017   37976  WARNING connectionpool.py(751) - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036E6190>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/50107483a4a59f2169fb0f4276af1c9a/element
+2020-09-15 14:05:47,017   37976  WARNING connectionpool.py(751) - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036E62E0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/50107483a4a59f2169fb0f4276af1c9a/element
+2020-09-15 14:05:48,011   37976  WARNING connectionpool.py(751) - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036E6430>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/50107483a4a59f2169fb0f4276af1c9a/element
+2020-09-15 14:05:49,019   37976    ERROR result.py(171) - 测试产生错误： test_3 (CRM.业务管理.Page_configuration.Three_template.forTest)
+Traceback (most recent call last):
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000000036E6580>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_pycharm\CRM\业务管理\Page_configuration\Three_template.py", line 427, in test_3
+    self.driver.find_element_by_xpath(
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 374, in execute
+    return self._request(command_info[0], url, body=data)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\request.py", line 79, in request
+    return self.request_encode_body(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\request.py", line 171, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\poolmanager.py", line 336, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 726, in urlopen
+    retries = retries.increment(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=59486): Max retries exceeded with url: /session/50107483a4a59f2169fb0f4276af1c9a/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036E6580>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+2020-09-15 14:05:49,023   37976     INFO result.py(86) - 测试结束： test_3 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 14:05:49,023   37976     INFO result.py(87) - 耗时： 4.010000228881836
+2020-09-15 14:05:49,024   37976     INFO result.py(65) - 开始测试： test_4 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 14:05:51,024   37976  WARNING connectionpool.py(751) - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036E66D0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/50107483a4a59f2169fb0f4276af1c9a/element
+2020-09-15 14:05:52,025   37976  WARNING connectionpool.py(751) - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036E6820>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/50107483a4a59f2169fb0f4276af1c9a/element
+2020-09-15 14:05:53,026   37976  WARNING connectionpool.py(751) - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036E6970>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/50107483a4a59f2169fb0f4276af1c9a/element
+2020-09-15 14:05:54,022   37976    ERROR result.py(171) - 测试产生错误： test_4 (CRM.业务管理.Page_configuration.Three_template.forTest)
+Traceback (most recent call last):
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000000035E9D30>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_pycharm\CRM\业务管理\Page_configuration\Three_template.py", line 452, in test_4
+    self.driver.find_element_by_xpath(
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 374, in execute
+    return self._request(command_info[0], url, body=data)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\request.py", line 79, in request
+    return self.request_encode_body(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\request.py", line 171, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\poolmanager.py", line 336, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 726, in urlopen
+    retries = retries.increment(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=59486): Max retries exceeded with url: /session/50107483a4a59f2169fb0f4276af1c9a/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000035E9D30>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+2020-09-15 14:05:54,026   37976     INFO result.py(86) - 测试结束： test_4 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 14:05:54,026   37976     INFO result.py(87) - 耗时： 5.002000093460083
+2020-09-15 14:05:54,026   38168    ERROR test_runner.py(193) - 
+Error	test_1 (CRM.业务管理.Page_configuration.Three_template.forTest)
+Error	test_2 (CRM.业务管理.Page_configuration.Three_template.forTest)
+Error	test_3 (CRM.业务管理.Page_configuration.Three_template.forTest)
+Error	test_4 (CRM.业务管理.Page_configuration.Three_template.forTest)
+
+2020-09-15 14:05:54,027   38168     INFO test_runner.py(211) - 
+测试结束！
+运行时间: 0:00:39.598000
+共计执行用例数量：4
+执行成功用例数量：0
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：4
+
+2020-09-15 14:09:01,692   22628     INFO test_runner.py(154) - 预计并发线程数：1
+2020-09-15 14:09:20,109   37792     INFO result.py(65) - 开始测试： test_1 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 14:09:24,115   37792  WARNING connectionpool.py(751) - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000035E8400>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/639039faf2f2cbbdc291ed61d50a52d7/element
+2020-09-15 14:09:25,115   37792  WARNING connectionpool.py(751) - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000000003641460>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/639039faf2f2cbbdc291ed61d50a52d7/element
+2020-09-15 14:09:26,115   37792  WARNING connectionpool.py(751) - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036415B0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/639039faf2f2cbbdc291ed61d50a52d7/element
+2020-09-15 14:21:12,358    5884     INFO test_runner.py(154) - 预计并发线程数：1
+2020-09-15 14:21:30,372    8308     INFO result.py(65) - 开始测试： test_1 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 14:21:34,373    8308  WARNING connectionpool.py(751) - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000035E9400>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/91fc33717aa0ad18e748f8e752ce5de7/element
+2020-09-15 14:21:35,374    8308  WARNING connectionpool.py(751) - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000000003641460>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/91fc33717aa0ad18e748f8e752ce5de7/element
+2020-09-15 14:21:36,374    8308  WARNING connectionpool.py(751) - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036415B0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/91fc33717aa0ad18e748f8e752ce5de7/element
+2020-09-15 14:21:37,384    8308    ERROR result.py(171) - 测试产生错误： test_1 (CRM.业务管理.Page_configuration.Three_template.forTest)
+Traceback (most recent call last):
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000000036416D0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_pycharm\CRM\业务管理\Page_configuration\Three_template.py", line 67, in test_1
+    self.driver.find_element_by_xpath(
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 374, in execute
+    return self._request(command_info[0], url, body=data)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\request.py", line 79, in request
+    return self.request_encode_body(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\request.py", line 171, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\poolmanager.py", line 336, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 726, in urlopen
+    retries = retries.increment(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=49645): Max retries exceeded with url: /session/91fc33717aa0ad18e748f8e752ce5de7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036416D0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+2020-09-15 14:21:37,385    8308     INFO result.py(86) - 测试结束： test_1 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 14:21:37,385    8308     INFO result.py(87) - 耗时： 7.013401031494141
+2020-09-15 14:21:37,385    8308     INFO result.py(65) - 开始测试： test_2 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 14:21:39,390    8308  WARNING connectionpool.py(751) - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000000003641BB0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/91fc33717aa0ad18e748f8e752ce5de7/element
+2020-09-15 14:21:40,400    8308  WARNING connectionpool.py(751) - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000000003641D60>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/91fc33717aa0ad18e748f8e752ce5de7/element
+2020-09-15 14:21:41,410    8308  WARNING connectionpool.py(751) - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000000003641EB0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/91fc33717aa0ad18e748f8e752ce5de7/element
+2020-09-15 14:21:42,412    8308    ERROR result.py(171) - 测试产生错误： test_2 (CRM.业务管理.Page_configuration.Three_template.forTest)
+Traceback (most recent call last):
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000000036E6040>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_pycharm\CRM\业务管理\Page_configuration\Three_template.py", line 341, in test_2
+    self.driver.find_element_by_xpath(
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 374, in execute
+    return self._request(command_info[0], url, body=data)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\request.py", line 79, in request
+    return self.request_encode_body(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\request.py", line 171, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\poolmanager.py", line 336, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 726, in urlopen
+    retries = retries.increment(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=49645): Max retries exceeded with url: /session/91fc33717aa0ad18e748f8e752ce5de7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036E6040>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+2020-09-15 14:21:42,414    8308     INFO result.py(86) - 测试结束： test_2 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 14:21:42,414    8308     INFO result.py(87) - 耗时： 5.028287649154663
+2020-09-15 14:21:42,414    8308     INFO result.py(65) - 开始测试： test_3 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 14:21:43,415    8308  WARNING connectionpool.py(751) - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036E6190>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/91fc33717aa0ad18e748f8e752ce5de7/element
+2020-09-15 14:21:44,419    8308  WARNING connectionpool.py(751) - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036E62E0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/91fc33717aa0ad18e748f8e752ce5de7/element
+2020-09-15 14:21:45,419    8308  WARNING connectionpool.py(751) - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036E6430>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/91fc33717aa0ad18e748f8e752ce5de7/element
+2020-09-15 14:21:46,420    8308    ERROR result.py(171) - 测试产生错误： test_3 (CRM.业务管理.Page_configuration.Three_template.forTest)
+Traceback (most recent call last):
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000000036E6580>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_pycharm\CRM\业务管理\Page_configuration\Three_template.py", line 427, in test_3
+    self.driver.find_element_by_xpath(
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 374, in execute
+    return self._request(command_info[0], url, body=data)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\request.py", line 79, in request
+    return self.request_encode_body(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\request.py", line 171, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\poolmanager.py", line 336, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 726, in urlopen
+    retries = retries.increment(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=49645): Max retries exceeded with url: /session/91fc33717aa0ad18e748f8e752ce5de7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036E6580>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+2020-09-15 14:21:46,421    8308     INFO result.py(86) - 测试结束： test_3 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 14:21:46,421    8308     INFO result.py(87) - 耗时： 4.007229328155518
+2020-09-15 14:21:46,421    8308     INFO result.py(65) - 开始测试： test_4 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 14:21:48,421    8308  WARNING connectionpool.py(751) - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036E66D0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/91fc33717aa0ad18e748f8e752ce5de7/element
+2020-09-15 14:21:49,428    8308  WARNING connectionpool.py(751) - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036E6820>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/91fc33717aa0ad18e748f8e752ce5de7/element
+2020-09-15 14:21:50,421    8308  WARNING connectionpool.py(751) - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000036E6970>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session/91fc33717aa0ad18e748f8e752ce5de7/element
+2020-09-15 14:21:51,423    8308    ERROR result.py(171) - 测试产生错误： test_4 (CRM.业务管理.Page_configuration.Three_template.forTest)
+Traceback (most recent call last):
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "C:\Users\zengjiangshan\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000000035E9D30>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_pycharm\CRM\业务管理\Page_configuration\Three_template.py", line 452, in test_4
+    self.driver.find_element_by_xpath(
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 374, in execute
+    return self._request(command_info[0], url, body=data)
+  File "D:\python_pycharm\venv\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\request.py", line 79, in request
+    return self.request_encode_body(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\request.py", line 171, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\poolmanager.py", line 336, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 754, in urlopen
+    return self.urlopen(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\connectionpool.py", line 726, in urlopen
+    retries = retries.increment(
+  File "D:\python_pycharm\venv\lib\site-packages\urllib3\util\retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=49645): Max retries exceeded with url: /session/91fc33717aa0ad18e748f8e752ce5de7/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000000035E9D30>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+2020-09-15 14:21:51,425    8308     INFO result.py(86) - 测试结束： test_4 (CRM.业务管理.Page_configuration.Three_template.forTest)
+2020-09-15 14:21:51,425    8308     INFO result.py(87) - 耗时： 5.004286050796509
+2020-09-15 14:21:51,425    5884    ERROR test_runner.py(193) - 
+Error	test_1 (CRM.业务管理.Page_configuration.Three_template.forTest)
+Error	test_2 (CRM.业务管理.Page_configuration.Three_template.forTest)
+Error	test_3 (CRM.业务管理.Page_configuration.Three_template.forTest)
+Error	test_4 (CRM.业务管理.Page_configuration.Three_template.forTest)
+
+2020-09-15 14:21:51,426    5884     INFO test_runner.py(211) - 
+测试结束！
+运行时间: 0:00:39.401254
+共计执行用例数量：4
+执行成功用例数量：0
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：4
+
